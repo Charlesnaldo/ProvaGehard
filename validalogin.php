@@ -20,7 +20,7 @@
                 <a href="#" onclick="showForm('notebook-form')">
                     <img src="./img/Notebook.png" alt="Notebook" class="device-image">
                     <p>Notebook</p>
-                    <p class="price">R$ 2.500,00</p>
+                    <p class="price">Notebook apartir de R$ 2.500,00</p>
                 </a>
             </div>
 
@@ -28,80 +28,80 @@
                 <a href="#" onclick="showForm('desktop-form')">
                     <img src="./img/desktop.png" alt="Desktop" class="device-image">
                     <p>Desktop</p>
-                    <p class="price">R$ 1.800,00</p>
+                    <p class="price">Completo apartir de R$ 1.800,00</p>
                 </a>
             </div>
         </div>
 
         <!-- Formulário para Notebook -->
-        <form id="notebook-form" action="processar.php" method="POST" class="specifications-form" style="display: none;">
+        <form id="notebook-form" action="retornonotebook.php" method="POST" class="specifications-form" style="display: none;">
             <h2>Escolha suas especificações para Notebook:</h2>
             <fieldset>
                 <legend>Selecione a CPU:</legend>
-                <label><input type="checkbox" name="cpu[]" value="cpu1"> Core i3 10G - R$ 500,00</label>
-                <label><input type="checkbox" name="cpu[]" value="cpu2"> Core i5 10G - R$ 700,00</label>
-                <label><input type="checkbox" name="cpu[]" value="cpu3"> Core i7 10G - R$ 900,00</label>
-                <label><input type="checkbox" name="cpu[]" value="cpu4"> Core i9 10g - R$ 1.200,00</label>
+                <label><input type="radio" name="cpu_desktop" value="Core i3 10G" required> Core i3 10G - R$ 500,00</label>
+                <label><input type="radio" name="cpu_desktop" value="Core i5 10G"> Core i5 10G - R$ 700,00</label>
+                <label><input type="radio" name="cpu_desktop" value="Core i7 10G"> Core i7 10G - R$ 900,00</label>
+                <label><input type="radio" name="cpu_desktop" value="Core i9 10G"> Core i9 10G - R$ 1.200,00</label>
             </fieldset>
             <fieldset>
                 <legend>Selecione o SSD:</legend>
-                <label><input type="checkbox" name="ssd[]" value="ssd1"> SSD 120 Gb - R$ 300,00</label>
-                <label><input type="checkbox" name="ssd[]" value="ssd2"> SSD 240 Gb - R$ 500,00</label>
-                <label><input type="checkbox" name="ssd[]" value="ssd3"> SSD 320 Gb - R$ 700,00</label>
-                <label><input type="checkbox" name="ssd[]" value="ssd4"> SSD 480 Gb - R$ 900,00</label>
+                <label><input type="radio" name="ssd_desktop" value="SSD 120 Gb" required> SSD 120 Gb - R$ 300,00</label>
+                <label><input type="radio" name="ssd_desktop" value="SSD 240 Gb"> SSD 240 Gb - R$ 500,00</label>
+                <label><input type="radio" name="ssd_desktop" value="SSD 320 Gb"> SSD 320 Gb - R$ 700,00</label>
+                <label><input type="radio" name="ssd_desktop" value="SSD 480 Gb"> SSD 480 Gb - R$ 900,00</label>
             </fieldset>
             <fieldset>
                 <legend>Selecione a Memória:</legend>
-                <label><input type="checkbox" name="memoria[]" value="memoria1"> Memória de 4GB DDR4 - R$ 200,00</label>
-                <label><input type="checkbox" name="memoria[]" value="memoria2"> Memória de 8GB DDR4 - R$ 300,00</label>
-                <label><input type="checkbox" name="memoria[]" value="memoria3"> Memória de 16GB DDR4 - R$ 400,00</label>
-                <label><input type="checkbox" name="memoria[]" value="memoria4"> Memória de 32GB DDR4 - R$ 500,00</label>
+                <label><input type="radio" name="memoria_desktop" value="Memória de 4GB DDR4" required> Memória de 4GB DDR4 - R$ 200,00</label>
+                <label><input type="radio" name="memoria_desktop" value="Memória de 8GB DDR4 "> Memória de 8GB DDR4 - R$ 300,00</label>
+                <label><input type="radio" name="memoria_desktop" value="Memória de 16GB DDR4"> Memória de 16GB DDR4 - R$ 400,00</label>
+                <label><input type="radio" name="memoria_desktop" value="Memória de 32GB DDR4"> Memória de 32GB DDR4 - R$ 500,00</label>
             </fieldset>
             <fieldset>
                 <legend>Selecione o Sistema Operacional:</legend>
-                <label><input type="checkbox" name="sistema_operacional[]" value="windows" required> Windows 11 Home - R$ 150,00</label>
-                <label><input type="checkbox" name="sistema_operacional[]" value="linux" required> Kali Linux - R$ 0,00</label>
+                <label><input type="radio" name="sistema_operacional_desktop" value="Windows 11 Home " required> Windows 11 Home - R$ 150,00</label>
+                <label><input type="radio" name="sistema_operacional_desktop" value="Kali Linux"> Kali Linux - R$ 0,00</label>
             </fieldset>
             <button type="submit">Enviar</button>
         </form>
 
         <!-- Formulário para Desktop -->
-        <form id="desktop-form" action="processar.php" method="POST" class="specifications-form" style="display: none;">
+        <form id="desktop-form" action="retornodesktop.php" method="POST" class="specifications-form" style="display: none;">
             <h2>Escolha suas especificações para Desktop:</h2>
             <fieldset>
                 <legend>Selecione a CPU:</legend>
-                <label><input type="checkbox" name="cpu[]" value="cpu1"> Core i3 10G - R$ 500,00</label>
-                <label><input type="checkbox" name="cpu[]" value="cpu2"> Core i5 10G - R$ 700,00</label>
-                <label><input type="checkbox" name="cpu[]" value="cpu3"> Core i7 10G - R$ 900,00</label>
-                <label><input type="checkbox" name="cpu[]" value="cpu4"> Core i9 10g - R$ 1.200,00</label>
+                <label><input type="radio" name="cpu_desktop" value="Core i3 10G" required> Core i3 10G - R$ 500,00</label>
+                <label><input type="radio" name="cpu_desktop" value="Core i5 10G"> Core i5 10G - R$ 700,00</label>
+                <label><input type="radio" name="cpu_desktop" value="Core i7 10G"> Core i7 10G - R$ 900,00</label>
+                <label><input type="radio" name="cpu_desktop" value="Core i9 10G"> Core i9 10G - R$ 1.200,00</label>
             </fieldset>
             <fieldset>
                 <legend>Selecione o SSD:</legend>
-                <label><input type="checkbox" name="ssd[]" value="ssd1"> SSD 120 Gb - R$ 300,00</label>
-                <label><input type="checkbox" name="ssd[]" value="ssd2"> SSD 240 Gb - R$ 500,00</label>
-                <label><input type="checkbox" name="ssd[]" value="ssd3"> SSD 320 Gb - R$ 700,00</label>
-                <label><input type="checkbox" name="ssd[]" value="ssd4"> SSD 480 Gb - R$ 900,00</label>
+                <label><input type="radio" name="ssd_desktop" value="SSD 120 Gb" required> SSD 120 Gb - R$ 300,00</label>
+                <label><input type="radio" name="ssd_desktop" value="SSD 240 Gb"> SSD 240 Gb - R$ 500,00</label>
+                <label><input type="radio" name="ssd_desktop" value="SSD 320 Gb"> SSD 320 Gb - R$ 700,00</label>
+                <label><input type="radio" name="ssd_desktop" value="SSD 480 Gb"> SSD 480 Gb - R$ 900,00</label>
             </fieldset>
             <fieldset>
                 <legend>Selecione a Memória:</legend>
-                <label><input type="checkbox" name="memoria[]" value="memoria1"> Memória de 4GB DDR4 - R$ 200,00</label>
-                <label><input type="checkbox" name="memoria[]" value="memoria2"> Memória de 8GB DDR4 - R$ 300,00</label>
-                <label><input type="checkbox" name="memoria[]" value="memoria3"> Memória de 16GB DDR4 - R$ 400,00</label>
-                <label><input type="checkbox" name="memoria[]" value="memoria4"> Memória de 32GB DDR4 - R$ 500,00</label>
+                <label><input type="radio" name="memoria_desktop" value="Memória de 4GB DDR4" required> Memória de 4GB DDR4 - R$ 200,00</label>
+                <label><input type="radio" name="memoria_desktop" value="Memória de 8GB DDR4 "> Memória de 8GB DDR4 - R$ 300,00</label>
+                <label><input type="radio" name="memoria_desktop" value="Memória de 16GB DDR4"> Memória de 16GB DDR4 - R$ 400,00</label>
+                <label><input type="radio" name="memoria_desktop" value="Memória de 32GB DDR4"> Memória de 32GB DDR4 - R$ 500,00</label>
             </fieldset>
-           
+
             <fieldset>
                 <legend>Selecione o Tamanho do Monitor:</legend>
-                <label><input type="checkbox" name="monitor[]" value="15" required> Monitor 15 - R$ 350,00</label>
-                <label><input type="checkbox" name="monitor[]" value="18" required> Monitor de 18 - R$ 500,00</label>
-                <label><input type="checkbox" name="monitor[]" value="21" required> Monitor de 21 - R$ 700,00</label>
-                <label><input type="checkbox" name="monitor[]" value="24" required> Monitor de 24 - R$ 900,00</label>
+                <label><input type="radio" name="monitor" value="Monitor de 15" required> Monitor 15 - R$ 350,00</label>
+                <label><input type="radio" name="monitor" value="Monitor de 18"> Monitor de 18 - R$ 500,00</label>
+                <label><input type="radio" name="monitor" value="Monitor de 21"> Monitor de 21 - R$ 700,00</label>
+                <label><input type="radio" name="monitor" value="Monitor de 24"> Monitor de 24 - R$ 900,00</label>
             </fieldset>
 
             <fieldset>
                 <legend>Selecione o Sistema Operacional:</legend>
-                <label><input type="checkbox" name="sistema_operacional[]" value="windows" required> Windows 11 Home - R$ 150,00</label>
-                <label><input type="checkbox" name="sistema_operacional[]" value="linux" required> Kali Linux - R$ 0,00</label>
+                <label><input type="radio" name="sistema_operacional_desktop" value="Windows 11 Home " required> Windows 11 Home - R$ 150,00</label>
+                <label><input type="radio" name="sistema_operacional_desktop" value="Kali Linux"> Kali Linux - R$ 0,00</label>
             </fieldset>
             <button type="submit">Enviar</button>
         </form>

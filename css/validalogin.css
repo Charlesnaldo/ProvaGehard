@@ -10,7 +10,7 @@ body, html {
 
 /* Estilo da Container */
 .info-container {
-    max-width: 800px; /* Limita a largura da container */
+    max-width: 600px; /* Limita a largura da container */
     margin: 40px auto; /* Centraliza a container */
     padding: 20px; /* Padding interno */
     background: #ffffff; /* Fundo branco */
