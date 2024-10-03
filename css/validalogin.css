@@ -40,10 +40,16 @@ h2 {
     margin: 20px 0;
 }
 
-/* Imagens de Dispositivo */
+/* Itens de Produto */
+.product-item {
+    text-align: center; /* Centraliza o texto */
+    width: 150px; /* Largura fixa para manter proporção */
+}
+
 .device-image {
-    width: 150px;
-    height: auto;
+    width: 100%; /* Preenche a largura do container */
+    height: 150px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Corta a imagem para se ajustar ao container */
     border-radius: 8px; /* Cantos arredondados */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra leve */
     transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
@@ -52,6 +58,14 @@ h2 {
 .device-image:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Preço */
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0167d4; /* Cor do preço */
+    margin-top: 5px;
 }
 
 /* Formulário de Especificações */
