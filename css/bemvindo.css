@@ -1,0 +1,95 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.info-container {
+    background: rgba(10, 23, 55, 0.2); /* Azul escuro com transparência */
+    padding: 2rem;
+    border-radius: 19px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    width: 800px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.info-container h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.info-container p {
+    color: #ffffff; /* Cor do texto */
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.image-links {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha as imagens verticalmente */
+    gap: 20px; /* Espaço entre as imagens */
+}
+
+.device-image {
+    width: 250px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: 100px; /* Altura fixa para as imagens */
+    object-fit: contain; /* Mantém a proporção da imagem */
+    border-radius: 5px;
+    transition: transform 0.3s; /* Efeito de transição */
+}
+
+.device-image:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: gray; /* Cor de fundo gray para maior contraste */
+    color: white; 
+    text-decoration: none; 
+    border-radius: 9px; 
+    margin-top: 20px; /* Espaçamento superior */
+    border: 2px solid #ffffff; /* Borda branca */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+}
+
+.back-button:hover {
+    background-color: gray; /* Cor de fundo mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de movimento ao passar o mouse */
+}
+
+
+/* Aqui estou alterando o nome do usuario logado pra deixar ele em destaque */
+.nome-destaque {
+    font-size: 32px; /* Ajuste o tamanho conforme necessário */
+    font-weight: bold; /* Define o texto como negrito */
+    color: #5b75f9; /* Mantenha a cor do texto como branco, se necessário */
+}

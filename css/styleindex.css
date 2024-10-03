@@ -1,0 +1,145 @@
+body, html {
+    
+    margin: 0; /*resetar margin*/
+    padding: 0;/*resetar padding*/
+    height: 100%; /* Altura total da página */
+    overflow: hidden; /* Remove rolagem */
+    font-family: "roboto", 'Times New Roman', Times, serif, sans-serif; /*define a fonte  */
+}
+
+/* Centraliza o conteúdo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do vídeo de fundo */
+#bg-video {
+    position: absolute; /* Coloca o vídeo como fundo */
+    top: 50%; 
+    left: 50%;
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto; 
+    z-index: -1; 
+    transform: translate(-50%, -50%); 
+}
+
+/* Estilo do contêiner de login */
+.login-container {
+    background: rgba(10, 23, 55, 0.5); /* Fundo com transparência */
+    padding: 2rem; 
+    border-radius: 29px; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+    width: 300px; 
+    text-align: center; 
+    position: relative; 
+    z-index: 1; 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    overflow: hidden;
+}
+
+/* Animação no hover */
+.login-container:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s; 
+}
+
+.login-container h2 {
+    color: #ffffff; 
+    font-size: 24px; 
+    margin-bottom: 1rem; 
+}
+
+/* Estilo dos rótulos */
+label {
+    color: #ffffff; /* Cor do texto do rótulo */
+    margin-bottom: 5px; 
+    display: block; /* Faz o rótulo ocupar a linha inteira */
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 80%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 2px solid #ccc; 
+    border-radius: 12px; 
+}
+
+/* Estilo do botão */
+button {
+    width: 87%; 
+    padding: 10px; 
+    margin: 20px 0; 
+    background-color: #0167d4; 
+    color: white; 
+    border: none; 
+    border-radius: 12px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+button:hover {
+    background-color: #73b0f2; 
+}
+
+/* Efeito de brilho */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(246, 247, 249, 0.168); 
+    border-radius: 80%;
+    filter: blur(40px); 
+    animation: shine 4s infinite; 
+    z-index: 0;
+}
+
+/* Animação do brilho */
+@keyframes shine {
+    0% {
+        transform: translate(-100%, -100%) rotate(0deg);
+        opacity: 0.5; 
+    }
+    50% {
+        opacity: 0.8; 
+    }
+    100% {
+        transform: translate(100%, 100%) rotate(360deg);
+        opacity: 0.5; 
+    }
+}
+
+body {
+    transition: opacity 0.5s ease; /* Define a transição */
+    opacity: 1; /* Opacidade inicial */
+}
+
+.fade-out {
+    opacity: 6; /* Opacidade quando sair */
+}
+
+.recuperar {
+    color: white; /* Cor do texto normal */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.recuperar:visited {
+    color: white; /* Cor do texto visitado */
+}
+
+.recuperar:hover {
+    color: rgb(9, 122, 234); /* Cor do texto ao passar o mouse */
+}
+
+.recuperar:active {
+    color: white; /* Cor do texto enquanto está sendo clicado */
+}
+

@@ -1,0 +1,108 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Altura total da página */
+    overflow: hidden; /* Remove rolagem */
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+}
+
+/* Centraliza o conteúdo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do vídeo de fundo */
+#bg-video {
+    position: absolute; /* Coloca o vídeo como fundo */
+    top: 50%; 
+    left: 50%;
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto; 
+    z-index: -1; 
+    transform: translate(-50%, -50%); 
+}
+
+/* Estilo do contêiner de mensagem de acesso negado */
+.login-container {
+    background: rgba(255, 0, 0, 0.2); /* Fundo vermelho com transparência */
+    padding: 2rem; 
+    border-radius: 29px; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 
+    width: 300px; 
+    text-align: center; 
+    position: relative; 
+    z-index: 1; 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+}
+
+/* Estilo do título */
+.login-container h2 {
+    color: #ffffff; 
+    font-size: 24px; 
+    margin-bottom: 1rem; 
+}
+
+/* Estilo do parágrafo */
+.login-container p {
+    color: #ffffff; /* Cor do texto */
+    font-size: 16px; 
+    margin-bottom: 1rem; 
+}
+
+/* Estilo do botão de retorno */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0167d4;  
+    color: white; 
+    text-decoration: none; 
+    border-radius: 9px; 
+    margin-top: 20px; /* Espaçamento superior */
+    position: relative; /* Para garantir que o botão fique no contexto do contêiner */
+    z-index: 1; /* Eleva o botão acima do brilho */
+}
+
+.back-button:hover {
+    background-color: #429cfc; 
+}
+
+/* Estilo do contêiner do login */
+.login-container {
+    position: relative; /* Para que o brilho seja posicionado em relação ao contêiner */
+    overflow: hidden; /* Impede que o brilho saia do contêiner */
+}
+
+/* Efeito de brilho */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(246, 247, 249, 0.2); /* Efeito mais suave */
+    border-radius: 80%;
+    filter: blur(40px); 
+    animation: shine 4s infinite; 
+    z-index: 0; /* Coloca o brilho atrás do conteúdo */
+}
+
+/* Animação do brilho */
+@keyframes shine {
+    0% {
+        transform: translate(-100%, -100%) rotate(0deg);
+        opacity: 0.3; /* Opacidade inicial mais baixa */
+    }
+    50% {
+        opacity: 0.7; /* Aumenta a opacidade no meio da animação */
+    }
+    100% {
+        transform: translate(100%, 100%) rotate(360deg);
+        opacity: 0.3; /* Retorna a opacidade ao valor inicial */
+    }
+}
