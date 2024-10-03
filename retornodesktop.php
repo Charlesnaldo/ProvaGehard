@@ -13,8 +13,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $monitor = sanitizeInput($_POST["monitor"] ?? "N/A");
     $sistemaOperacional = sanitizeInput($_POST["sistema_operacional_desktop"] ?? "N/A");
 
+     // Verifica se o nome está armazenado na sessão
+     if (isset($_SESSION['nome'])) {
+        $nome = $_SESSION['nome'];
+    } else {
+        $nome = "Usuário"; // Valor padrão se o nome não estiver na sessão
+    }
     // Exibir as escolhas
     echo "<h2>Resumo das suas escolhas:</h2>";
+    echo "<h3>Desktop<h3>";
     echo "<ul>";
     echo "<li><strong>Processador escolhido:</strong> $cpu</li>";
     echo "<li><strong>SSD escolhido:</strong> $ssd</li>";
@@ -63,5 +70,8 @@ $total += $valores['monitor'][$monitor] ?? 0;
 $total += $valores['sistema'][$sistemaOperacional] ?? 0;
 
 // Exibir o total
-echo "<h3>Total: R$ " . number_format($total, 2, ',', '.') . "</h3>";
+echo "<h3>O total do seu pedido Sr(a)  $nome, é de : R$ " . number_format($total, 2, ',', '.') . "</h3>";
+
+echo '<a href="validalogin.php" class="back-button">Voltar para a Página de Produtos</a>';
 ?>
+

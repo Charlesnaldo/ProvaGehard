@@ -14,13 +14,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $monitor = sanitizeInput($_POST["monitor"] ?? "N/A");
     $sistemaOperacional = sanitizeInput($_POST["sistema_operacional_desktop"] ?? "N/A");
 
+    // Verifica se o nome está armazenado na sessão
+    if (isset($_SESSION['nome'])) {
+        $nome = $_SESSION['nome'];
+    } else {
+        $nome = "Usuário"; // Valor padrão se o nome não estiver na sessão
+    }
+
     // Exibir as escolhas
     echo "<h2>Resumo das suas escolhas:</h2>";
+    echo "<h3>Notebook<h3>";
     echo "<ul>";
     echo "<li><strong>Processador escolhido:</strong> $cpu</li>";
     echo "<li><strong>SSD escolhido:</strong> $ssd</li>";
     echo "<li><strong>Memória escolhida:</strong> $memoria</li>";
-    echo "<li><strong>Monitor escolhido:</strong> $monitor</li>"; // Adicionei o monitor aqui
     echo "<li><strong>Sistema Operacional escolhido:</strong> $sistemaOperacional</li>";
     echo "</ul>";
 
@@ -46,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ],
         'sistema' => [
             'Windows 11 Home' => 150,
-            'Linux' => 0
+            'Kali Linux' => 0
         ]
     ];
 
@@ -58,9 +65,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $total += $valores['sistema'][$sistemaOperacional] ?? 0;
 
     // Exibir o total
-    $nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : 'usuário';
-    echo "<h3>Parabéns, $nome! Total: R$ " . number_format($total, 2, ',', '.') . "</h3>";
+    echo "<h3>O total do seu pedido Sr(a) , $nome é de : R$ " . number_format($total, 2, ',', '.') . "</h3>";
 
-    var_dump($_POST);
+    echo '<a href="validalogin.php" class="back-button">Voltar para a Página de Produtos</a>';
 }
 ?>

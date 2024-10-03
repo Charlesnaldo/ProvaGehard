@@ -12,6 +12,7 @@
         <?php
         
         session_start(); // Inicia a sessão
+        $nome = '';
         
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email_correto = "ronaldo@gmail.com";
@@ -32,6 +33,7 @@
                 header("Location: pagina_acessonegado.php");
                 exit(); // Garante que o código a seguir não seja executado
             }
+            
         }
         ?>
          
