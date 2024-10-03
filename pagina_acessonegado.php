@@ -18,11 +18,7 @@
 
 <div class="login-container">
     <h2>ACESSO NEGADO!</h2>
-
-    <!-- Script Php para puxar o nome  -->
-    <?php $nome = isset($_GET['nome']) ? htmlspecialchars($_GET['nome']) : 'usuário';
-        ?>
-    <p>Desculpe <?php echo $nome; ?>, você não tem permissão para acessar esta página.</p>
+    <p>Desculpe usuario, você não tem permissão para acessar esta página.</p>
     <p>Por favor, verifique suas credenciais ou entre em contato com o administrador.</p>
 
     <!-- Botão de voltar para pagina de login -->

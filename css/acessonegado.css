@@ -28,7 +28,7 @@ body {
 
 /* Estilo do contêiner de mensagem de acesso negado */
 .login-container {
-    background: rgba(255, 0, 0, 0.2); /* Fundo vermelho com transparência */
+    background: rgba(255, 0, 0, 0.124); /* Fundo vermelho com transparência */
     padding: 2rem; 
     border-radius: 29px; 
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 

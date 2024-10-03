@@ -46,7 +46,7 @@
                 <a href="#" onclick="showForm('notebook-form')">
                     <img src="./img/Notebook.png" alt="Notebook" class="device-image">
                     <p>Notebook</p>
-                    <p class="price">Notebook apartir de R$ 2.500,00</p>
+                    <p class="price">a partir de R$ 2.500,00</p>
                 </a>
             </div>
 
@@ -54,7 +54,7 @@
                 <a href="#" onclick="showForm('desktop-form')">
                     <img src="./img/desktop.png" alt="Desktop" class="device-image">
                     <p>Desktop</p>
-                    <p class="price">Completo apartir de R$ 1.800,00</p>
+                    <p class="price"> a partir de R$ 1.800,00</p>
                 </a>
             </div>
         </div>

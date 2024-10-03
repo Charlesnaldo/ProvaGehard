@@ -73,5 +73,7 @@ $total += $valores['sistema'][$sistemaOperacional] ?? 0;
 echo "<h3>O total do seu pedido Sr(a)  $nome, é de : R$ " . number_format($total, 2, ',', '.') . "</h3>";
 
 echo '<a href="validalogin.php" class="back-button">Voltar para a Página de Produtos</a>';
+
+
 ?>
 

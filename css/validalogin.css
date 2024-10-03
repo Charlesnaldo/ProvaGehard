@@ -29,7 +29,7 @@ h2 {
 .nome-destaque {
     font-weight: bold;
     font-size: 32px;
-    color: #ffcc00;
+    color: #0d0330;
 }
 
 /* Links de Imagem */
@@ -120,7 +120,7 @@ button:hover {
 .back-button {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #d9534f;
+    background-color: #3945d0;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -130,5 +130,5 @@ button:hover {
 }
 
 .back-button:hover {
-    background-color: #c9302c;
+    background-color: #02053d;
 }
