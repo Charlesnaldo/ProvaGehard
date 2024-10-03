@@ -1,95 +1,120 @@
+/* Reset e Estilização Básica */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: auto;
-    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Cor de fundo suave */
+    color: #333; /* Cor do texto padrão */
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-}
-
+/* Estilo da Container */
 .info-container {
-    background: rgba(10, 23, 55, 0.2); /* Azul escuro com transparência */
-    padding: 2rem;
-    border-radius: 19px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-    width: 800px;
+    max-width: 800px; /* Limita a largura da container */
+    margin: 40px auto; /* Centraliza a container */
+    padding: 20px; /* Padding interno */
+    background: #ffffff; /* Fundo branco */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Títulos */
+h2 {
+    margin: 20px 0;
+    font-size: 28px;
     text-align: center;
-    position: relative;
-    z-index: 1;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #333; /* Cor do texto do título */
 }
 
-.info-container h2 {
-    color: #ffffff;
-    font-size: 24px;
-    margin-bottom: 1rem;
+.nome-destaque {
+    font-weight: bold;
+    font-size: 32px;
+    color: #ffcc00;
 }
 
-.info-container p {
-    color: #ffffff; /* Cor do texto */
-    font-size: 16px;
-    margin-bottom: 1.5rem;
-}
-
+/* Links de Imagem */
 .image-links {
     display: flex;
     justify-content: center;
-    align-items: center; /* Alinha as imagens verticalmente */
-    gap: 20px; /* Espaço entre as imagens */
+    gap: 40px; /* Espaço entre as imagens */
+    margin: 20px 0;
 }
 
+/* Imagens de Dispositivo */
 .device-image {
-    width: 250px; /* Ajuste o tamanho das imagens conforme necessário */
-    height: 100px; /* Altura fixa para as imagens */
-    object-fit: contain; /* Mantém a proporção da imagem */
-    border-radius: 5px;
-    transition: transform 0.3s; /* Efeito de transição */
+    width: 150px;
+    height: auto;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
 }
 
 .device-image:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
 }
 
+/* Formulário de Especificações */
+.specifications-form {
+    margin-top: 20px;
+    max-width: 600px; /* Limita a largura do formulário */
+    background: #ffffff; /* Fundo branco */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Fieldset */
+fieldset {
+    border: 1px solid #ccc; /* Borda sutil */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 20px;
+    color: #555; /* Cor do título do fieldset */
+}
+
+/* Labels */
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+/* Botão de Enviar */
+button {
+    background-color: #0167d4;
+    color: white;
+    padding: 12px 20px; /* Ajuste do padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto 0;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Botão de Voltar */
 .back-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: gray; /* Cor de fundo gray para maior contraste */
-    color: white; 
-    text-decoration: none; 
-    border-radius: 9px; 
-    margin-top: 20px; /* Espaçamento superior */
-    border: 2px solid #ffffff; /* Borda branca */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
-    transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+    padding: 10px 15px;
+    background-color: #d9534f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s;
 }
 
 .back-button:hover {
-    background-color: gray; /* Cor de fundo mais escura ao passar o mouse */
-    transform: translateY(-2px); /* Efeito de movimento ao passar o mouse */
-}
-
-
-/* Aqui estou alterando o nome do usuario logado pra deixar ele em destaque */
-.nome-destaque {
-    font-size: 32px; /* Ajuste o tamanho conforme necessário */
-    font-weight: bold; /* Define o texto como negrito */
-    color: #5b75f9; /* Mantenha a cor do texto como branco, se necessário */
+    background-color: #c9302c;
 }
