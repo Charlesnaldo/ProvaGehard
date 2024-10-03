@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Boas Vindas</title>
-    <link rel="stylesheet" href="./css/bemvindo.css">
+    <link rel="stylesheet" href="./css/validalogin.css">
     <link rel="icon" href="./img/pesquisa.png" type="image/x-icon">
 </head>
 <body>

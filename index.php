@@ -25,8 +25,7 @@
 <!-- aqui começa o formulario que enviar para o php via metodo post -->
 <div class="login-container">
         <h2>Seja Bem Vindo!</h2>
-        <form action="validalogin.php" method="post">
-            
+        <form action="validalogin.php" method="post">            
             <input type="text" name="nome" placeholder="Digite seu nome" required>            
             <input type="email" name="email" placeholder="Digite seu E-mail" required>            
             <input type="password" name="senha" placeholder="Digite sua Senha" required>
