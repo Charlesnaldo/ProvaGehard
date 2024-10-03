@@ -1,0 +1,86 @@
+/* Reset e Estilização Básica */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Cor de fundo suave */
+    color: #333; /* Cor do texto padrão */
+}
+
+/* Estilo da Container */
+.container {
+    position: relative; /* Para posicionar o pseudo-elemento corretamente */
+    max-width: 600px; /* Limita a largura da container */
+    margin: 40px auto; /* Centraliza a container */
+    padding: 20px; /* Padding interno */
+    background: #ffffff; /* Fundo branco */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Move um pouco para baixo */
+    animation: fadeIn 0.5s forwards; /* Animação de desvanecimento */
+}
+
+/* Pseudo-elemento para brilho */
+.container::before {
+    content: '';
+    position: absolute; /* Posiciona o brilho em relação ao contêiner */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Brilho preto suave */
+    border-radius: 10px; /* Cantos arredondados para o brilho */
+    z-index: -1; /* Coloca o brilho atrás do conteúdo */
+    filter: blur(8px); /* Efeito de desfoque */
+}
+
+/* Animação de Fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Torna visível */
+        transform: translateY(0); /* Move para a posição original */
+    }
+}
+
+/* Títulos */
+h2 {
+    margin: 20px 0;
+    font-size: 28px;
+    text-align: center;
+    color: #333; /* Cor do texto do título */
+}
+
+h3 {
+    text-align: center;
+    color: #0d0330; /* Cor do subtítulo */
+}
+
+/* Lista */
+ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove padding padrão */
+}
+
+li {
+    margin: 10px 0; /* Espaçamento entre itens da lista */
+}
+
+/* Botão de Voltar */
+.back-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #3945d0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+.back-button:hover {
+    background-color: #02053d; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o botão */
+}
