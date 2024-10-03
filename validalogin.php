@@ -9,9 +9,33 @@
 </head>
 <body>
     <div class="info-container">
-        <?php 
-            $nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : 'usuário';
+        <?php
+        
+        session_start(); // Inicia a sessão
+        
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $email_correto = "ronaldo@gmail.com";
+            $senha_correto = "123456";
+        
+            // Sanitiza e obtém as entradas
+            $nome = htmlspecialchars(trim($_POST['nome'] ?? ''));
+            $email = htmlspecialchars(trim($_POST['email'] ?? ''));
+            $senha = htmlspecialchars(trim($_POST['senha'] ?? ''));
+        
+            // Valida as credenciais
+            if ($email === $email_correto && $senha === $senha_correto) {
+                $_SESSION['nome'] = $nome; // Armazena o nome do usuário na sessão
+                
+                // Aqui você pode redirecionar para outra página, se necessário
+            } else {
+                // Redireciona para a página de acesso negado
+                header("Location: pagina_acessonegado.php");
+                exit(); // Garante que o código a seguir não seja executado
+            }
+        }
         ?>
+         
+          
         <h2>Seja bem-vindo, <span class="nome-destaque"><?php echo $nome; ?></span></h2>
         
         <h2>Escolha um produto:</h2>
@@ -110,6 +134,7 @@
         <a href="index.php" class="back-button">Voltar ao Login</a>
     </div>
 
+?>
     <script>
         function showForm(formId) {
             document.getElementById('notebook-form').style.display = 'none';
