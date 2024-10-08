@@ -132,3 +132,23 @@ button:hover {
 .back-button:hover {
     background-color: #02053d;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .info-container, .specifications-form {
+        padding: 15px; /* Menos padding em telas menores */
+    }
+    
+    .image-links {
+        flex-direction: column; /* Empilha as imagens em telas pequenas */
+        gap: 20px; /* Menos espaço entre as imagens */
+    }
+
+    .product-item {
+        width: 100%; /* Largura total em telas pequenas */
+    }
+    
+    button, .back-button {
+        width: 100%; /* Botões em largura total */
+    }
+}
