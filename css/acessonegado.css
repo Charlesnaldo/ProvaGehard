@@ -106,3 +106,16 @@ body {
         opacity: 0.3; /* Retorna a opacidade ao valor inicial */
     }
 }
+
+.login-container h2 {
+    color: #ff0000; /* Cor do texto do título */
+    font-size: 24px; 
+    margin-bottom: 1rem; 
+    display: flex; /* Alinha o ícone e o texto na mesma linha */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.login-container h2 i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    color: #ff0000; /* Cor do ícone */
+}

@@ -30,10 +30,12 @@ body {
 /* Estilo do contêiner de login */
 .login-container {
     background: rgba(10, 23, 55, 0.5); /* Fundo com transparência */
-    padding: 2rem; 
+    padding: 3rem; 
+    padding-top: ;
     border-radius: 29px; 
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
-    width: 300px; 
+    width: 270px; 
+    height: 370px;
     text-align: center; 
     position: relative; 
     z-index: 1; 
@@ -72,7 +74,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 
 /* Estilo do botão */
 button {
-    width: 87%; 
+    width: 100%; 
     padding: 10px; 
     margin: 20px 0; 
     background-color: #0167d4; 
@@ -81,10 +83,13 @@ button {
     border-radius: 12px; 
     cursor: pointer; 
     font-size: 16px; 
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
 }
 
 button:hover {
-    background-color: #73b0f2; 
+    background-color: #73b0f2; /* Cor de fundo no hover */
+    transform: translateY(-3px); /* Leve elevação */
+    box-shadow: 0 4px 15px rgba(0, 103, 212, 0.5); /* Sombra ao passar o mouse */
 }
 
 /* Efeito de brilho */
@@ -142,4 +147,34 @@ body {
 .recuperar:active {
     color: white; /* Cor do texto enquanto está sendo clicado */
 }
+
+
+
+
+/* DEtalhes dos icones  */
+
+.input-container {
+    position: relative; /* Para posicionar o ícone dentro do input */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura */
+}
+
+.input-container input {
+    width: 80%; /* Ocupa toda a largura disponível */
+    padding: 10px 10px 10px 40px; /* Preenchimento do input */
+    border: 2px solid #ccc; 
+    border-radius: 12px; 
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo do input */
+    color: #000; /* Cor do texto do input */
+}
+
+/* Estilo do ícone */
+.input-container i {
+    position: absolute; /* Posiciona o ícone dentro do input */
+    left: 13px; /* Distância da esquerda */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralizar */
+    color: #73b0f2; /* Cor do ícone */
+    pointer-events: none; /* Ignora eventos do mouse no ícone */
+}
+
 

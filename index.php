@@ -12,6 +12,9 @@ session_start(); // Inicia a sessão
     <link rel="stylesheet" href="./css/styleindex.css">
     <!-- Fiveicon -->
     <link rel="icon" href="./img/pesquisa.png" type="image/x-icon">
+    <!-- icones de dentro do label  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
    
     
 </head>
@@ -25,22 +28,39 @@ session_start(); // Inicia a sessão
  <!-- Vídeo de fundo -->
 
 
-<!-- aqui começa o formulario que enviar para o php via metodo post -->
+<!-- aqui começa o formulario que envia para o php via metodo post -->
 <div class="login-container">
-        <h2>Seja Bem Vindo!</h2>
-        <form action="validalogin.php" method="post">            
-            <input type="text" name="nome" placeholder="Digite seu nome" required>            
-            <input type="email" name="email" placeholder="Digite seu E-mail" required>            
-            <input type="password" name="senha" placeholder="Digite sua Senha" required>
-            <!-- BoTão de ação  -->
+    <h2>Seja Bem Vindo!</h2>
+
+     <!-- aqui a ação que manda o clinte para o validalogin  -->
+    <form action="validalogin.php" method="post">       
+        <div class="form-group">
             
-            <button type="submit">LOGIN</button>
-        </form>
-        
-        <a href ="#voltar" class="recuperar">Clique aqui para recuperar sua senha</a>
-        
-    </div>
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input type="text" name="nome" placeholder="Digite seu nome" required> 
+            </div>
+        </div>
+        <div class="form-group">
+            
+            <div class="input-container">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Digite seu E-mail" required> 
+            </div>
+        </div>
+        <div class="form-group">
+            
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="senha" placeholder="Digite sua Senha" required>
+            </div>
+        </div>
+
+        <button type="submit">LOGIN</button>
     </form>
+    
+    <a href="#voltar" class="recuperar">Clique aqui para recuperar sua senha</a>
+</div>
 
     <script>
        

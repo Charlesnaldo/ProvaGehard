@@ -11,7 +11,7 @@
 
 <div class="container">
     <?php
-    session_start();
+     session_start(); //Inicia uma nova sessão ou retoma uma sessão existente. Isso permite que você armazene e recupere informações do usuário durante a navegação no site
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Função para sanitizar a entrada e evitar XSS
@@ -65,11 +65,11 @@
         ];
 
         // Calcular o total
-        $total = 0;
-        $total += $valores['cpu'][$cpu] ?? 0;
-        $total += $valores['ssd'][$ssd] ?? 0;
-        $total += $valores['memoria'][$memoria] ?? 0;
-        $total += $valores['sistema'][$sistemaOperacional] ?? 0;
+        $total = 0; // Inicializa a variável total com zero
+        $total += $valores['cpu'][$cpu] ?? 0; // Adiciona o preço do processador escolhido ao total
+        $total += $valores['ssd'][$ssd] ?? 0; // Adiciona o preço do SSD escolhido ao total
+        $total += $valores['memoria'][$memoria] ?? 0; // Adiciona o preço da memória escolhida ao total
+        $total += $valores['sistema'][$sistemaOperacional] ?? 0; // Adiciona o preço do sistema operacional escolhido ao total
 
         // Exibir o total
         echo "<h3>O total do seu pedido Sr(a) $nome é de: R$ " . number_format($total, 2, ',', '.') . "</h3>";

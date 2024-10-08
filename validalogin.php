@@ -11,17 +11,26 @@
     <div class="info-container">
         <?php
         
-        session_start(); // Inicia a sessão
-        $nome = '';
+        session_start(); // Inicia a sessão para armazenar dados do usuário durante a navegação
+        $nome = '';// Inicializa a variável $nome como uma string vazia
         
+
+        // Verifica se o método de requisição é POST
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email_correto = "ronaldo@gmail.com";
             $senha_correto = "123456";
         
             // Sanitiza e obtém as entradas
+
+            // Obtém o valor do campo 'nome' enviado pelo formulário, 
             $nome = htmlspecialchars(trim($_POST['nome'] ?? ''));
+            // A função trim() remove espaços em branco do início e do fim da string
             $email = htmlspecialchars(trim($_POST['email'] ?? ''));
+            // htmlspecialchars(...): Esta função converte caracteres especiais em entidades HTML
             $senha = htmlspecialchars(trim($_POST['senha'] ?? ''));
+
+
+            // O símbolo ?? em PHP é o operador de coalescência nula. Ele é usado para retornar o primeiro operando que não é nulo. Basicamente, ele verifica se a variável à esquerda está definida e não é nula. Se estiver, ele retorna esse valor; caso contrário, retorna o valor à direita.
         
             // Valida as credenciais
             if ($email === $email_correto && $senha === $senha_correto) {
@@ -37,9 +46,11 @@
         }
         ?>
          
-          
+         <!-- ao logar atender a credeciais ele vai ter opçoes de escolhar   -->
+
         <h2>Seja bem-vindo, <span class="nome-destaque"><?php echo $nome; ?></span></h2>
         
+        <!-- Aqui a opção do notebook -->
         <h2>Escolha um produto:</h2>
         <div class="image-links">
             <div class="product-item">
@@ -49,7 +60,7 @@
                     <p class="price">a partir de R$ 2.500,00</p>
                 </a>
             </div>
-
+        <!-- Aqui a opção do desktop -->
             <div class="product-item">
                 <a href="#" onclick="showForm('desktop-form')">
                     <img src="./img/desktop.png" alt="Desktop" class="device-image">
@@ -92,6 +103,8 @@
         </form>
 
         <!-- Formulário para Desktop -->
+
+         <!-- note que ao escolher e enviar os dados sera direcionado para pagina retornodesktop.php -->
         <form id="desktop-form" action="retornodesktop.php" method="POST" class="specifications-form" style="display: none;">
             <h2>Escolha suas especificações para Desktop:</h2>
             <fieldset>
@@ -139,10 +152,15 @@
 ?>
     <script>
         function showForm(formId) {
-            document.getElementById('notebook-form').style.display = 'none';
-            document.getElementById('desktop-form').style.display = 'none';
-            document.getElementById(formId).style.display = 'block';
-        }
+    // Esconde o formulário "notebook-form"
+    document.getElementById('notebook-form').style.display = 'none';
+
+    // Esconde o formulário "desktop-form"
+    document.getElementById('desktop-form').style.display = 'none';
+
+    // Exibe o formulário passado como argumento (formId)
+    document.getElementById(formId).style.display = 'block';
+}
     </script>
 </body>
 </html>
